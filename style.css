@@ -12,6 +12,107 @@ body,html{
     overflow-x: hidden;
 }
 
+/* sidebar  */
+#toggle{
+  visibility:hidden;
+  position: fixed;
+  top:20px;
+  right:20px;
+  width: 60px;
+  height: 60px;
+  background: #030303;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo{
+  display: flex;
+
+  justify-content: center;
+}
+
+@media only screen and (max-width:1023px) {
+  #toggle{
+    visibility:visible;
+  }
+  #navbar{
+  visibility:hidden;
+    
+  }
+}
+
+#toggle::before{
+  content:'';
+  position:absolute;
+  width:28px;
+  height:3px;
+  background: #fff;
+  transform: translateY(-5px);
+  transition: 0.2s;
+}
+
+#toggle::after{
+  content:'';
+  position:absolute;
+  width:28px;
+  height:3px;
+  background: #fff;
+  transform: translateY(5px);
+  transition: 0.2s;
+}
+
+#toggle.active::before{
+  transform: translateY(0px)rotate(45deg);
+}
+
+#toggle.active::after{
+  transform: translateY(0px)rotate(-45deg);
+}
+
+
+#sidebar{
+  position:fixed;
+  top:0;
+  left:-60vw;
+  width:60vw;
+  height:100vh;
+  background: #090909;
+  transition: 0.5s;
+  z-index: 100;
+}
+
+#sidebar.active{
+  left:0px;
+}
+
+#sidebar ul{
+  position: relative;
+  margin-top: 50px;;
+}
+
+#sidebar ul li{
+  list-style: none;
+  display: inline-block;
+  width:100%;
+  padding:10px 40px;
+  text-align: center;
+}
+
+#sidebar ul li:hover{
+  color: grey;
+}
+
+#sidebar ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 4.5vw;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+
 nav {
     
     z-index: 100;
@@ -137,7 +238,7 @@ nav .menu-btn i{
 
 
 .background {
-    background: rgba(0, 0, 0, 0.7) url('./bck.jpg');
+    background: rgba(0, 0, 0, 0.7) url('/bck.jpg');
     background-size: cover;
     background-blend-mode: darken;
     z-index: 150;
@@ -350,7 +451,7 @@ nav .menu-btn i{
 
 @media only screen and (max-width:415px) {
   .rowm .right .contentm p {
-      font-size: 4.5vw;
+      font-size: 5.5vw;
   }
 }
 
@@ -515,6 +616,17 @@ nav .menu-btn i{
     font-weight: 300;
     margin: 2em 0;
   }
+
+  @media only screen and (max-width:415px) {
+    .accordion button .accordion-title {
+     
+      font-size: 4.9vw;
+  }
+
+  .accordion .accordion-content p {
+    font-size: 4.0vw;
+  }
+}
 
   /*  Pitch Your Ideas   */
 
