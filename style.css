@@ -137,7 +137,7 @@ nav .menu-btn i{
 
 
 .background {
-    background: rgba(0, 0, 0, 0.7) url('/bck.JPG');
+    background: rgba(0, 0, 0, 0.7) url('./bck.jpg');
     background-size: cover;
     background-blend-mode: darken;
     z-index: 150;
