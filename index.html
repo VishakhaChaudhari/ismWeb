@@ -12,8 +12,8 @@
 <body>
     <div class="background">
     <nav id="navbar" >
-        <!-- <div class="logo">ISM</div> -->
-        <div class="logo"><img src="./logor.png" alt=""></div>
+     
+        <div class="logo"><img src="/logor.png" alt=""></div>
         <input type="checkbox" id="click">
          <label for="click" class="menu-btn">
             <i class="fa fa-bars"></i>
@@ -26,6 +26,21 @@
             <li><a href="#pyi">Pitch Your Ideas</a></li>
         </ul>
     </nav>
+
+    <div class="navbar">
+        <div id="toggle"></div>
+        <div id="sidebar">
+            <ul>
+                <div class="logo"><img src="/logor.png" alt=""></div>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#mission">Misiion</a></li>
+                <li><a href="#event">Events</a></li>
+                <li><a href="#pyi">Pitch Your Ideas</a></li>
+            </ul>
+        </div>
+    
+    </div>
 
     <section class="firstSection">
         <div class="mainBox">
@@ -58,7 +73,7 @@
         </div>
 
         <div class="left" data-aos="fade-left">
-            <img class="image" src="./m.png" alt="mission">
+            <img class="image" src="/m.png" alt="mission">
         </div>
       </div>
     </div>
@@ -74,7 +89,7 @@
 
   <div class="rowm">
     <div class="left" data-aos="fade-right">
-        <img class="image" src="./m.png" alt="mission">
+        <img class="image" src="/m.png" alt="mission">
     </div>
     <div class="right" data-aos="fade-left">
         <div class="contentm">
@@ -94,7 +109,7 @@
             <div class="card"data-aos="zoom-in" >
                 <div class="imgbox">
                   <img id="eventimg"
-                    src="./m.png"
+                    src="/m.png"
                   />
                 </div>
           
@@ -110,7 +125,7 @@
               <div class="card" data-aos="zoom-in">
                 <div class="imgbox">
                   <img id="eventimg"
-                    src="./m.png"
+                    src="/m.png"
                   />
                 </div>
           
@@ -126,7 +141,7 @@
               <div class="card" data-aos="zoom-in">
                 <div class="imgbox">
                   <img id="eventimg"
-                    src="./m.png"
+                    src="/m.png"
                   />
                 </div>
           
@@ -154,7 +169,7 @@
     
       <div class="rowm">
         <div class="left" data-aos="fade-right">
-            <img class="image"src="./m.png" alt="">
+            <img class="image"src="/m.png" alt="">
         </div>
         <div class="right" data-aos="fade-left">
             <div class="contentm">
@@ -341,7 +356,7 @@
     <footer class="footer-distributed">
 
         <div class="footer-left">
-      <img src="./logor.png">
+      <img src="/logor.png">
             <!-- <h3><span>ISM</span></h3> -->
 
             <p class="footer-links">
@@ -444,6 +459,24 @@
 }
 
 window.addEventListener('scroll', scrollValue);
+</script>
+
+<script>
+    const toggle = document.getElementById('toggle');
+    const sidebar = document.getElementById('sidebar');
+
+    document.onclick = function (e) {
+        if (e.target.id != 'sidebar' && e.target.id != 'toggle') {
+            toggle.classList.remove('active');
+            sidebar.classList.remove('active');
+        }
+    }
+
+    toggle.onclick = function () {
+        toggle.classList.toggle('active');
+        sidebar.classList.toggle('active');
+
+    }
 </script>
 
 
