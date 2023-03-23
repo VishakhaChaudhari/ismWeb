@@ -232,6 +232,43 @@ nav .menu-btn i{
      }
 }
 
+
+.navb{
+  visibility: hidden;
+}
+
+@media (max-width:912px){
+ .navb{
+  visibility: visible;
+ }
+}
+
+@media (max-width:415px){
+  #logor{
+
+    position: relative;
+    right: 117px;
+    top: 18px;
+  }
+}
+
+@media (max-width:280px){
+  #logor{
+    right: 61px;
+    top: 18px;
+  }
+}
+
+@media (min-width:419px){
+  #logor{
+    position: relative;
+    right: 38vw;
+    top: 2vh;
+  }
+}
+
+
+
 /* color change  */
 
 
@@ -445,14 +482,27 @@ nav .menu-btn i{
 
 .mission {
     width: 100%;
-    min-height: 10vh;
+   
     display: grid;
     place-items: center;
 }
 
+
+
+
 @media only screen and (max-width:415px) {
+  .mission{
+    height:100vh;
+  }
   .rowm .right .contentm p {
       font-size: 4.5vw;
+  }
+  #aboutUs{
+    position:relative;
+    bottom:136px;
+  }
+  #mission{
+    height: 100vh;
   }
 }
 
