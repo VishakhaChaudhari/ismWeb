@@ -492,7 +492,7 @@ nav .menu-btn i{
 
 @media only screen and (max-width:415px) {
   .mission{
-    height:100vh;
+    height:95vh;
   }
   .rowm .right .contentm p {
       font-size: 4.5vw;
