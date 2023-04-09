@@ -28,12 +28,13 @@
     </nav>
 
     <div class="navbar">
-        <div class="navb" >
+        <div id="navb" >
             <div  class="logo" ><img id="logor" src="/logor.png" alt=""></div>
             <div id="toggle"></div>
         </div>
        
         <div id="sidebar">
+            <!-- <div id="toggle"></div> -->
             <ul>
                 <div class="logo"><img src="/logor.png" alt=""></div>
                 <li><a href="#">Home</a></li>
@@ -164,7 +165,7 @@
     </section>
 
      <!-- Upcoming Events  -->
-     <section class="mis" id="event" style="height:100vh">
+     <section class="mis" id="event" style="height:95vh">
         <div class="title" id="eventm">
             <h1>Upcoming Events !</h1>
         </div>
@@ -465,9 +466,26 @@
 window.addEventListener('scroll', scrollValue);
 </script>
 
+
+<script>
+    function scrollValue() {
+    var navb = document.getElementById('navb');
+    var scroll = window.scrollY;
+    if (scroll < 130) {
+        navb.classList.remove('BgColour');
+    } else {
+        navb.classList.add('BgColour');
+    }
+}
+
+window.addEventListener('scroll', scrollValue);
+</script>
+
 <script>
     const toggle = document.getElementById('toggle');
     const sidebar = document.getElementById('sidebar');
+    const navb = document.getElementById('navb');
+
 
     document.onclick = function (e) {
         if (e.target.id != 'sidebar' && e.target.id != 'toggle') {
@@ -478,7 +496,9 @@ window.addEventListener('scroll', scrollValue);
 
     toggle.onclick = function () {
         toggle.classList.toggle('active');
+        toggle.classList.toggle('BgColour');
         sidebar.classList.toggle('active');
+        navb.classList.toggle('active');
 
     }
 </script>
