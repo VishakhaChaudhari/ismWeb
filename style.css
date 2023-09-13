@@ -459,6 +459,14 @@ nav .menu-btn i{
     }
 }
 
+@media only screen and (min-width:375px) {
+    #misa {
+        display:none;
+    }
+
+    
+}
+
 @media only screen and (min-width:1024px) {
     .rowm .left img {
         width: 100%;
